@@ -1,2 +1,9 @@
 <h1>Lists#new</h1>
 <p>Find me in app/views/lists/new.html.erb</p>
+
+<%= simple_form_for [@movie, @list] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Create list", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Back to lists",  lists_path %>
